@@ -1,0 +1,25 @@
+author: M.Mueller-Spaeth "mamuesp" <fms1961@gmail.com>
+type: lib
+description: A rotating alternating rainbow column with RGB LEDs, kind of a lava lamp effect
+version: 1.0
+
+sources:
+  - src
+
+filesystem:
+  - fs
+
+config_schema:
+  - ["ledeffects.lava", "o", {title: ""}] 
+  - ["ledeffects.lava.timeout", "i", 40, {title: ""}]
+  - ["ledeffects.lava.dim_all", "d", 0.33, {title: "Dimming of the LED over all colors"}]
+  - ["ledeffects.lava.color_divisor", "d", 1.0, {title: ""}]
+  - ["ledeffects.lava.color_start", "i", 0, {title: ""}]
+  - ["ledeffects.lava.color_end", "i", 255, {title: ""}]
+  
+libs:
+
+tags:
+  - c
+
+manifest_version: 2017-09-29
