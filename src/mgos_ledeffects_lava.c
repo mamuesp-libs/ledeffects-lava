@@ -70,7 +70,7 @@ void mgos_ledeffects_lava(void* param, mgos_rgbleds_action action)
     }
 }
 
-bool mgos_lava_init(void) {
+bool mgos_ledeffects_lava_init(void) {
   LOG(LL_INFO, ("mgos_lava_init ..."));
   ledmaster_add_effect("ANIM_LAVA", mgos_ledeffects_lava);
   return true;
