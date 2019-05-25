@@ -35,10 +35,10 @@ static void mgos_intern_lava_loop(mgos_rgbleds* leds)
                 int pix_pos = (leds->pix_pos + col * step) % 256;
                 out_pix = tools_color_wheel(((row * 256 / num_rows) + pix_pos) & 255, 255.0);
                 LOG(LL_VERBOSE_DEBUG, ("mgos_lava:\tR: 0x%.02X\tG: 0x%.02X\tB: 0x%.02X", out_pix.r, out_pix.g, out_pix.b));
-                mgos_rgbleds_plot_pixel(leds, col, row, out_pix, true);
+                mgos_universal_led_plot_pixel(leds, col, row, out_pix, true);
             }
         }
-        mgos_rgbleds_show(leds);
+        mgos_universal_led_show(leds);
         leds->pix_pos -= leds->internal_loops;
         leds->pix_pos = leds->pix_pos < 0 ? 255 : leds->pix_pos;
     }
